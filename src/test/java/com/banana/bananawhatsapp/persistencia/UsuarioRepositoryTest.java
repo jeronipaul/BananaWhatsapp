@@ -45,10 +45,6 @@ class UsuarioRepositoryTest {
             Usuario verificarBD = repoTest.getUsuarioById(nuevoUsuario.getId());
             assertThat(nuevoUsuario.toString(), equalTo(verificarBD.toString()));
         }
-/*        assertThat(nuevoUsuario.getNombre(), equalTo(verificarBD.getNombre()));
-        assertThat(nuevoUsuario.getEmail(), equalTo(verificarBD.getEmail()));
-        assertThat(nuevoUsuario.isActivo(), is(verificarBD.isActivo()));
-        assertThat(nuevoUsuario.isActivo(), is(verificarBD.isActivo()));*/
 
         //Borramos para no llenar la base de datos "prod" de basura
         repo.borrar(nuevoUsuario);
